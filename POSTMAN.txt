@@ -1,0 +1,10 @@
+var json_responce_body = xml2Json(responseBody);
+console.log(json_responce_body);
+tests["Check expected Farenheit value"] = json_responce_body['soap:Envelope']['soap:Body']['CelsiusToFahrenheitResponse']['CelsiusToFahrenheitResult']==='68';
+var Fahrenheit_Value=json_responce_body['soap:Envelope']['soap:Body']['CelsiusToFahrenheitResponse']['CelsiusToFahrenheitResult'];
+console.log(Fahrenheit_Value);
+https://documenter.getpostman.com/view/27716677/2s93mATz7x
+
+newman run collection_export.json -d "filepath/filename.csv"
+
+June@12345
